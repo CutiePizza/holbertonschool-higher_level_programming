@@ -9,11 +9,11 @@
  * @num: num
  */
 
-void create_node(listint_t *node, int num)
+void create_node(listint_t **node, int num)
 {
-	node = malloc(sizeof(listint_t));
-	node->n = num;
-	node->next = NULL;
+	*node = malloc(sizeof(listint_t));
+	(*node)->n = num;
+	(*node)->next = NULL;
 }
 
 /**
@@ -29,7 +29,7 @@ listint_t *insert_node(listint_t **head, int number)
 
 	if (*head == NULL)
 	{
-		create_node(*head, number);
+		create_node(head, number);
 		return (*head);
 	}
 	if (number < (*head)->n)
