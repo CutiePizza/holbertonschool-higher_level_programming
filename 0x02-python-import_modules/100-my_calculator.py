@@ -3,7 +3,7 @@ from calculator_1 import add, sub, mul, div
 import sys
 if __name__ == "__main__":
     if len(sys.argv) - 1 != 3:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        print("Usage: {} <a> <operator> <b>".format(sys.argv[0]))
         sys.exit(1)
     else:
         a = int(sys.argv[1])
