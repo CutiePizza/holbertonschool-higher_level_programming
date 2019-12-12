@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import sys
 if __name__ == "__main__":
-    path = dir(sys.path.append('./hidden_4.pyc'))
+    import hidden_4
+    path = dir(hidden_4)
     for i in range(0, len(path)):
         if path[i][0] != '_':
             print(path[i], end="\n")
