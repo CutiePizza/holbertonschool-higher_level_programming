@@ -10,5 +10,8 @@ def roman_to_int(roman_string):
             'M': 1000}
     val = 0
     for i in range(len(roman_string)):
-        val += roman_val[roman_string[i]]
+        if roman_string[i] in roman_val:
+            val += roman_val[roman_string[i]]
+        else:
+            return None
     return val
