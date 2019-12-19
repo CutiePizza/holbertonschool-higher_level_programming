@@ -13,5 +13,5 @@ def roman_to_int(roman_string):
         if roman_string[i] in roman_val:
             val += roman_val[roman_string[i]]
         else:
-            return None
+            return 0
     return val
