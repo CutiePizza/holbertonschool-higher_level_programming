@@ -13,7 +13,7 @@ def roman_to_int(roman_string):
     val = 0
     for i in range(len(roman_string)):
         if roman_string[i] in rv:
-                if rv[roman_string[i]] > rv[roman_string[i - 1]]:
+                if i > 0 and rv[roman_string[i]] > rv[roman_string[i - 1]]:
                     val += (rv[roman_string[i]] - 2 * rv[roman_string[i - 1]])
                 else:
                     val += rv[roman_string[i]]
