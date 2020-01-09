@@ -1,7 +1,14 @@
 #!/usr/bin/python3
 class Square:
     def __init__(self, size=0, position=(0, 0)):
-        self.__position = position
+        message = "position must be a tuple of 2 positive integers"
+        if isinstance(position, tuple) and len(position) > 2:
+            if (isinstance(position[0], int) and isinstance(position[1], int)):
+                self.__position = position
+            else:
+                raise TypeError(message)
+        else:
+            raise TypeError(message)
         if isinstance(size, int):
             if size < 0:
                 raise ValueError("size must be >= 0")
