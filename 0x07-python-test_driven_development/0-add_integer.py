@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Module with a function add_integer
-Import this module in your file to use the function add_integer
+add this module in your file to use the function add_integer
 Example: See docstring
 """
 
