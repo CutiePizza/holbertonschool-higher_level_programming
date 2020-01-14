@@ -21,6 +21,7 @@ def matrix_divided(matrix, div):
         raise TypeError(message)
     if (len(matrix) == 0):
         raise TypeError(message)
+    len0 = len(matrix[0])
     for i in range(len(matrix)):
         mini = []
         for j in range(len(matrix[i])):
@@ -30,7 +31,7 @@ def matrix_divided(matrix, div):
                 raise TypeError(message)
         if (len(mini) == 0):
             raise TypeError(message)
-        if j != len(matrix):
+        if (len(mini) != len0):
             raise TypeError("Each row of the matrix must have the same size")
         mat.append(mini)
     return mat
