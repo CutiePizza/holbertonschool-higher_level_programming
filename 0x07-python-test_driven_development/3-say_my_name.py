@@ -12,7 +12,7 @@ def say_my_name(first_name, last_name=""):
     """
     if isinstance(first_name, str) and isinstance(last_name, str):
         if len(last_name) == 0:
-            print("My name is {}".format(first_name))
+            print("My name is {} ".format(first_name))
         else:
             print("My name is {} {}".format(first_name, last_name))
     else:
