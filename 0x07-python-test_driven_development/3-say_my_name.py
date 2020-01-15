@@ -11,9 +11,6 @@ def say_my_name(first_name, last_name=""):
     Function that prints My name and last name
     """
     if type(first_name) is str and type(last_name) is str:
-        if len(last_name) == 0:
-            print("My name is {} ".format(first_name))
-        else:
             print("My name is {} {}".format(first_name, last_name))
     else:
         if type(first_name) is not str or first_name is None:
