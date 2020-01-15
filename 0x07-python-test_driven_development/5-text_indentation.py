@@ -18,9 +18,10 @@ def text_indentation(text):
             print(text[i])
             print("")
         else:
-            if (text[i - 1] == "?" or text[i - 1] == ":" or text[i - 1] == ".")
-            and
-            (text[i] == " "):
+            a = text[i - 1]
+            bool1 = a == "?" or a == ":" or a == "."
+            bool2 = text[i] == " "
+            if bool1 and bool2:
                 print(text[i + 1], end="")
                 i += 1
             else:
