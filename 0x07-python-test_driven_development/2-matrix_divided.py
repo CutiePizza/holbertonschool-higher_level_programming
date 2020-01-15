@@ -13,7 +13,7 @@ def matrix_divided(matrix, div):
     mat = []
     numeric = (int, float)
     message = "matrix must be a matrix (list of lists) of integers/float"
-    if not isinstance(div, numeric):
+    if type(div) is not int and type(div) is not float:
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
@@ -26,7 +26,8 @@ def matrix_divided(matrix, div):
         mini = []
         for j in range(len(matrix[i])):
             if isinstance(matrix[i][j], numeric):
-                mini.append(round(matrix[i][j] / div, 2))
+                n = matrix[i][j] / div
+                mini.append(round(n, 2))
             else:
                 raise TypeError(message)
         if (len(mini) == 0):
