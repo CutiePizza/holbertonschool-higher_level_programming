@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Module with a function say_my_name
-Import this module in your file to use the function say_my_name
+this module in your file to use the function say_my_name
 Example: See docstring
 """
 
