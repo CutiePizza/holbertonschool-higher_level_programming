@@ -62,3 +62,5 @@ John
 Holberton.
 <BLANKLINE>
 School
+>>> id(" ")
+<BLANKLINE>
