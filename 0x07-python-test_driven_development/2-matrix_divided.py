@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Module with a function matrix_divided
-Import this module in your file to use the function matrix_divided
+this module in your file to use the function matrix_divided
 Example: See docstring n tests folder
 """
 
