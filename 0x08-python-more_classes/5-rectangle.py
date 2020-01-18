@@ -70,6 +70,8 @@ class Rectangle:
         """Calculate the rectangle's perimeter
         Returns: An int
         """
+        if self.__width == 0 or self.height == 0:
+            return 0
         return (self.__width*2) + (self.__height*2)
 
     def __str__(self):
@@ -78,6 +80,8 @@ class Rectangle:
         """
         h = self.__height
         w = self.__width
+        if h == 0 or w == 0:
+            return ""
         mat = ""
         for i in range(h):
             for j in range(w):
