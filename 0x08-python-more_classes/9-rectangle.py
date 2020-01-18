@@ -59,8 +59,12 @@ class Rectangle:
             width (int): default value 0
             height (int): default value 0
         """
-        self.height = height
-        self.width = width
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        if height < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = height
+        self.__width = width
         Rectangle.number_of_instances += 1
 
     def area(self):
