@@ -86,12 +86,10 @@ class Rectangle:
         if h == 0 or w == 0:
             return ""
         mat = ""
-        symbol = self.print_symbol
-        for i in range(h):
-            for j in range(w):
-                mat += " ".join(symbol)
-            if i != h - 1:
-                mat += " ".join("\n")
+        symbol = str(self.print_symbol)
+        for j in range(h):
+            mat = mat + symbol * w
+            mat = mat + "\n"
         return mat
 
     def __repr__(self):
