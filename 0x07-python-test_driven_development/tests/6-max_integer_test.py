@@ -10,3 +10,4 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer([]), None)
         self.assertAlmostEqual(max_integer(["a", "aa", "aaa", "aaaa"]), "aaaa")
         self.assertAlmostEqual(max_integer([-1, -2, -3, 0]), 0)
+        self.assertAlmostEqual(max_integer([9, 2, 3, 4]), 9)
