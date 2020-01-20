@@ -89,7 +89,8 @@ class Rectangle:
         symbol = str(self.print_symbol)
         for j in range(h):
             mat = mat + symbol * w
-            mat = mat + "\n"
+            if j != h - 1:
+                mat = mat + "\n"
         return mat
 
     def __repr__(self):
