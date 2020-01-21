@@ -1,0 +1,14 @@
+>>> BG = __import__('7-base_geometry').BaseGeometry
+>>> b = BG()
+>>> b.integer_validator("name", "Luna")
+Traceback (most recent call last):
+TypeError: name must be an integer
+>>> b.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+>>> b.integer_validator("age", -6)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+>>> b.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() takes exactly 3 arguments (1 given)
