@@ -5,6 +5,8 @@ Print a pascal triangle
 
 
 def pascal_triangle(n):
+    if n is None:
+        return None
     if n <= 0:
         return ([])
     mat = []
