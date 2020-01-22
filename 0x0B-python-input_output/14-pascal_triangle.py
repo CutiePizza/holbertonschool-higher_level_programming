@@ -7,9 +7,9 @@ Print a pascal triangle
 def pascal_triangle(n):
     if n <= 0:
         return ([])
-    mat = [[1]]
+    mat = []
     val = 1
-    for i in range(1, n):
+    for i in range(n):
         mini = []
         for j in range(i + 1):
             if j is 0:
