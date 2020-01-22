@@ -9,4 +9,4 @@ def class_to_json(obj):
     of an object
     """
     a = obj.__dict__
-    return (dict(a))
+    return (a)
