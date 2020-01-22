@@ -6,7 +6,7 @@ Print a pascal triangle
 
 def pascal_triangle(n):
     if n <= 0:
-        return (list)
+        return ([[]])
     mat = [[1]]
     val = 1
     for i in range(1, n):
