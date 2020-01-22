@@ -6,7 +6,7 @@ Print a pascal triangle
 
 def pascal_triangle(n):
     if n <= 0:
-        return ([])
+        return (list)
     mat = [[1]]
     val = 1
     for i in range(1, n):
@@ -18,5 +18,4 @@ def pascal_triangle(n):
                 val = val * (i - j + 1)/j
             mini.append(int(val))
         mat.append(mini)
-
     return (mat)
