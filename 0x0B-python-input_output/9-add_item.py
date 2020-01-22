@@ -9,11 +9,15 @@ Script to add arguments to json file
 """
 
 filename = "add_item.json"
-if len(sys.argv) == 1:
-    item = []
-    save(item, filename)
-else:
+try:
     my_obj = load(filename)
-    for i in range(1, len(sys.argv)):
-        my_obj.append(sys.argv[i])
+except:
+    with open(filename, mode='w', encoding='UTF8') as f:
+        f.write('')
+        my_obj = []
+if len(os.sys.argv) == 1:
+    save(my_obj, filename)
+else:
+    for i in range(1, len(os.sys.argv)):
+        my_obj.append(os.sys.argv[i])
     save(my_obj, filename)
