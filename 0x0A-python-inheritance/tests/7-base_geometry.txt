@@ -11,4 +11,4 @@ Traceback (most recent call last):
 ValueError: age must be greater than 0
 >>> b.integer_validator()
 Traceback (most recent call last):
-TypeError: integer_validator() takes exactly 3 arguments (1 given)
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
