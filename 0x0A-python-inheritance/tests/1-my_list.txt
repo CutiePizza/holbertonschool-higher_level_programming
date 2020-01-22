@@ -12,3 +12,17 @@
 [-5, 0, 1, 2]
 >>> my_list = MyList([1, 2, -5, 0]); print(my_list)
 [1, 2, -5, 0]
+>>> my_list = MyList()
+>>> my_list.append(2)
+>>> my_list.append(5)
+>>> my_list.append(0)
+>>> my_list.print_sorted()
+[0, 2, 5]
+>>> print(my_list)
+[2, 5, 0]
+>>> isinstance(my_list, list)
+True
+>>> issubclass(MyList, list)
+True
+>>> type(my_list) is MyList
+True
