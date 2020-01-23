@@ -17,7 +17,7 @@ def pascal_triangle(n):
             if j is 0:
                 val = 1
             else:
-                val = val * (i - j + 1)/j
-            mini.append(int(val))
+                val = val * (i - j + 1)//j
+            mini.append(val)
         mat.append(mini)
     return (mat)
