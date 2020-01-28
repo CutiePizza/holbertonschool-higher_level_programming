@@ -36,12 +36,11 @@ class Base:
         class method
         """
         filename = cls.__name__ + ".json"
+        l = []
         if list_objs is None:
             with open(filename, mode='w', encoding='UTF-8') as f:
-                l = []
-                f.write(l)
+                f.write(cls.to_json_string(l))
         else:
-            l = []
             with open(filename, mode='w', encoding='UTF-8') as f:
                 for i in list_objs:
                     l.append(i.to_dictionary())
