@@ -62,6 +62,9 @@ class Base:
         """
         class method to create a copy of instance
         """
-        r = cls(1, 2)
+        if cls.__name__ == "Rectangle":
+            r = cls(1, 2)
+        else:
+            r = cls(2)
         r.update(**dictionary)
         return r
