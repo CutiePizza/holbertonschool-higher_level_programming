@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 Test Module for Rectangle class
 """
 
+
 class TestBase(unittest.TestCase):
     """
     TestBase for Base
@@ -22,7 +23,6 @@ class TestBase(unittest.TestCase):
             self.assertEqual(R.id, 12)
             R = Rectangle(-2, 1)
             self.assertEqual(R.id, 3)
-        
         with self.assertRaises(TypeError):
             R = Rectangle()
 
@@ -33,7 +33,7 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             R1 = Rectangle(10, "2")
 
-        with  self.assertRaises(ValueError):
+        with self.assertRaises(ValueError):
             R1 = Rectangle(0, 3)
 
         with self.assertRaises(ValueError):
@@ -116,7 +116,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(r1.height, 3)
         self.assertEqual(r1.x, 4)
 
-        r1.update(89, 2, 3, 4, 5 )
+        r1.update(89, 2, 3, 4, 5)
         self.assertEqual(r1.id, 89)
         self.assertEqual(r1.width, 2)
         self.assertEqual(r1.height, 3)
