@@ -47,3 +47,14 @@ class Square(Rectangle):
             for k, v in kwargs.items():
                 if hasattr(self, k) is True:
                     setattr(self, k, v)
+
+    def to_dictionary(self):
+        """
+        to dictionary method
+        """
+        a = {}
+        a["id"] = self.id
+        a["x"] = self.x
+        a["size"] = self.width
+        a["y"] = self.y
+        return a
