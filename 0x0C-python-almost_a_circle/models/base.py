@@ -68,3 +68,21 @@ class Base:
             r = cls(2)
         r.update(**dictionary)
         return r
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        load from file
+        """
+        import json
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, mode='r') as f:
+                line = f.read()
+                line_str = cls.from_json_string(line)
+                l = []
+                for i in line_str:
+                    l.append(cls.create(**i))
+                return l
+        except:
+            return []
