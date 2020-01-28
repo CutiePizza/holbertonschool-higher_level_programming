@@ -19,5 +19,5 @@ class Square(Rectangle):
         """
         str method
         """
-        msg = '[Square] ({}) {}/{} - {}/{}'
-        return msg.format(self.id, self.x, self.y, self.width, self.height)
+        msg = '[Square] ({}) {}/{} - {}'
+        return msg.format(self.id, self.x, self.y, self.width)
