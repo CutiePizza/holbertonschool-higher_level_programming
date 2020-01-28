@@ -6,13 +6,9 @@ Module for rectangle
 
 
 class Rectangle(Base):
-    """
-    Claas Rectangle
-    """
+    """Claas Rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        Init method
-        """
+        """Init method"""
         super().__init__(id)
         self.width = width
         self.height = height
@@ -21,16 +17,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """
-        return width
-        """
+        """return width"""
         return self.__width
 
     @width.setter
     def width(self, width):
-        """
-        sets width
-        """
+        """sets width"""
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -39,16 +31,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """
-        return height
-        """
+        """return height"""
         return(self.__height)
 
     @height.setter
     def height(self, height):
-        """
-        sets height
-        """
+        """sets height"""
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
@@ -57,16 +45,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """
-        return x
-        """
+        """return x"""
         return(self.__x)
 
     @x.setter
     def x(self, x):
-        """
-        sets x
-        """
+        """sets x"""
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -75,16 +59,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """
-        returns y
-        """
+        """returns y"""
         return(self.__y)
 
     @y.setter
     def y(self, y):
-        """
-        sets y
-        """
+        """sets y"""
         if type(y) is not int:
             raise TypeError("y must be an integer")
         if y < 0:
@@ -92,15 +72,11 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
-        """Calculate the rectangle's area
-        Returns: An int
-        """
+        """Calculate the rectangle's area"""
         return self.width*self.height
 
     def display(self):
-        """
-        display
-        """
+        """display"""
         h = self.height
         w = self.width
         string = "#" * w
@@ -110,16 +86,12 @@ class Rectangle(Base):
         print(s)
 
     def __str__(self):
-        """
-        str method
-        """
+        """str method"""
         msg = '[Rectangle] ({}) {}/{} - {}/{}'
         return msg.format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
-        """
-        update method
-        """
+        """update method"""
         if len(args) >= 1 and len(args) != 0:
             self.id = args[0]
         if len(args) >= 2 and len(args) != 0:
