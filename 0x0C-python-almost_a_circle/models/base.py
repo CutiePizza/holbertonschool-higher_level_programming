@@ -35,7 +35,6 @@ class Base:
         """
         class method
         """
-        import json
         filename = cls.__name__ + ".json"
         if list_objs is None:
             with open(filename, mode='w', encoding='UTF-8') as f:
@@ -46,4 +45,4 @@ class Base:
             with open(filename, mode='w', encoding='UTF-8') as f:
                 for i in list_objs:
                     l.append(i.to_dictionary())
-                f.write(Base.to_json_string(l))
+                f.write(cls.to_json_string(l))
