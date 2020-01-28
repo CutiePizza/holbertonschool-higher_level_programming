@@ -110,6 +110,9 @@ class Rectangle(Base):
                     setattr(self, k, v)
 
     def to_dictionary(self):
+        """
+        to dictionary method
+        """
         a = {}
         a["x"] = self.x
         a["y"] = self.y
