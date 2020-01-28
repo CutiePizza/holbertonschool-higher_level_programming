@@ -62,6 +62,6 @@ class Base:
         """
         class method to create a copy of instance
         """
-        r = cls(1, 1, 1, 1)
+        r = cls(1, 2)
         r.update(**dictionary)
         return r
