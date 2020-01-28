@@ -13,14 +13,15 @@ class TestBase(unittest.TestCase):
         """
         Tests for rectangle
         """
-        R = Rectangle(10, 2)
-        self.assertEqual(R.id, 1)
-        R = Rectangle(2, 10)
-        self.assertEqual(R.id, 2)
-        R = Rectangle(10, 2, 0, 0, 12)
-        self.assertEqual(R.id, 12)
-        R = Rectangle(-2, 1)
-        self.assertEqual(R.id, 3)
+        if __name__ == "main":
+            R = Rectangle(10, 2)
+            self.assertEqual(R.id, 1)
+            R = Rectangle(2, 10)
+            self.assertEqual(R.id, 2)
+            R = Rectangle(10, 2, 0, 0, 12)
+            self.assertEqual(R.id, 12)
+            R = Rectangle(-2, 1)
+            self.assertEqual(R.id, 3)
         
         with self.assertRaises(TypeError):
             R = Rectangle()
