@@ -48,6 +48,9 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """
+        comments
+        """
         import json
         l = []
         if json_string is None:
@@ -56,6 +59,9 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        """
+        class method to create a copy of instance
+        """
         r = cls(1, 1, 1, 1)
         r.update(**dictionary)
         return r
