@@ -5,9 +5,15 @@ Module with class 1
 
 
 class Base:
+    """
+    Doctest for class Base
+    """
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """
+        Init method of class Base
+        """
         if id is not None:
             self.id = id
         else:
