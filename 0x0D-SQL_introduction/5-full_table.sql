@@ -1,2 +1,4 @@
 -- Print description a table
-show columns from first_table;
+select * 
+from information_schema.columns
+where table_name = 'first_table';
