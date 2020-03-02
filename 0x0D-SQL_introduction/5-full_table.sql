@@ -1,2 +1,2 @@
 -- Print description a table
-desc first_table;
+show columns from first_table;
