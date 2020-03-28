@@ -22,6 +22,7 @@ if __name__ == "__main__":
     for i in range(len(query)):
         if i != len(query) - 1:
             print(query[i][0], end=", ")
-    print(query[i][0])
+        else:
+            print(query[i][0])
     cursor.close()
     db.close()
