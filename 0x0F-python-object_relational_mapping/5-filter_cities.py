@@ -19,7 +19,6 @@ if __name__ == "__main__":
             WHERE states.name = %s\
             ORDER BY cities.id ASC', (sys.argv[4],))
     query = cursor.fetchall()
-    print(query)
     for i in range(len(query)):
         if i != len(query) - 1:
             print(query[i][0], end=", ")
