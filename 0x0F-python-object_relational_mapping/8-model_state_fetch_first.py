@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-print the first State object from the database
+Script that lists all State
 """
 
 import sys
@@ -9,14 +9,20 @@ from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        sys.argv[1],
-        sys.argv[2],
-        sys.argv[3]
-        ), pool_pre_ping=True)
+    engine = create_engine(
+            'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+                sys.argv[1],
+                sys.argv[2],
+                sys.argv[3]
+                ), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     Session = sessionmaker()
     Session.configure(bind=engine)
     session = Session()
-    for row in session.query(State).order_by(State.id)[:1]:
-        print("{}: {}".format(row.id, row.name))
+    for instance in session.query(State).order_by(State.id).filter(
+            State.id == 1
+            ):
+        if instance is None:
+            print("Nothing")
+        else:
+            print("{}: {}".format(instance.id, instance.name))
