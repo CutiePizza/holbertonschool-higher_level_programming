@@ -7,6 +7,7 @@ if __name__ == "__main__":
     import sys
     db = MySQLdb.connect(
             host="localhost",
+            port=3306,
             user=sys.argv[1],
             passwd=sys.argv[2],
             db=sys.argv[3],
@@ -14,7 +15,7 @@ if __name__ == "__main__":
             )
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states\
-            WHERE states.name='{}'\
+            WHERE states.name LIKE '{}%'\
             ORDER BY states.id ASC".format(sys.argv[4]))
     query = cursor.fetchall()
     for row in query:
