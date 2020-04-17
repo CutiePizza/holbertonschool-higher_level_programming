@@ -3,8 +3,10 @@
 Task five
 """
 import requests
+import sys
 
 
 if __name__ == "__main__":
-    r = requests.get('https://intranet.hbtn.io/status')
+    url = sys.argv[1]
+    r = requests.get(url)
     print(r.headers["X-Request-Id"])
