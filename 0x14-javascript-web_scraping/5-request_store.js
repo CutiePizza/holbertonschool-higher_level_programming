@@ -6,7 +6,7 @@ const filename = process.argv[3];
 request(url, { json: true }, (err, res, body) => {
   if (err) { return console.log(err); }
   const string = body;
-  fs.writeFile(filename, string, (error) => {
+  fs.writeFile(filename, string,'utf8', (error) => {
     if (error) throw error;
   });
 });
