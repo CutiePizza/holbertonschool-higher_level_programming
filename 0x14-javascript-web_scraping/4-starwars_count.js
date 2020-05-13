@@ -6,12 +6,14 @@ request(url, { json: true }, (err, res, body) => {
   let i, j;
   const result = body.results;
   let n = 0;
-  for (i = 0; i < result.length; i++) {
-    const perso = result[i].characters;
-    for (j = 0; j < perso.length; j++) {
-      if (perso[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
-        n++;
-        break;
+  if (result !== undefined) {
+    for (i = 0; i < result.length; i++) {
+      const perso = result[i].characters;
+      for (j = 0; j < perso.length; j++) {
+        if (perso[j] === 'https://swapi-api.hbtn.io/api/people/18/') {
+          n++;
+          break;
+        }
       }
     }
   }
